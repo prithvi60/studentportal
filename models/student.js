@@ -4,10 +4,10 @@ const { boolean } = require('webidl-conversions');
 const { Schema } = mongoose;
 const studentSchema = new Schema({
   SID: {
-    type: String,
-    unique:true,
-    required: true,
-    trim: true,
+    type:String,
+    requried:true,
+    unique:true
+    
   },
   min:{
     type:Number,
@@ -25,8 +25,7 @@ checkin:{
     type:Date
 },
 present:{
-    type:Boolean,
-    default:true
+    type:Boolean
 }
 },
 {
@@ -34,8 +33,9 @@ present:{
 });
 studentSchema.pre('save', async function(next) {
     const user = this;
-    
+    console.log("hikjefl")
       user.checkin=new Date(user.createdAt.getTime()+(5*60+30)*60000);
+      user.present=true
       console.log(new Date().getTime()+(5*60+30)*60000)
 });
   

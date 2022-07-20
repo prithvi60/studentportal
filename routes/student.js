@@ -5,6 +5,7 @@ const router = new express.Router();
 router.post('/stud', async (req, res) => {
     const stud = new Student(req.body);
     try {
+        
         console.log(req.body)
         await stud.save();
         res.status(201).send(stud);
@@ -12,7 +13,6 @@ router.post('/stud', async (req, res) => {
         res.status(400).send(e);
     }
 });
-
 router.get('/stud', async (req, res) => {
     try {
         const studs = await Student.find({});

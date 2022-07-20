@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MainserviceService } from '../mainservice.service';
 
 @Component({
   selector: 'app-example',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExampleComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(public ser:MainserviceService) { }
+public sid:any
   ngOnInit(): void {
+    this.ser.getUpdate(this.ser.studId).subscribe((data)=>{
+      this.sid=data.SID
+    })
   }
 
 }

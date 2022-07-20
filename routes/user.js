@@ -1,5 +1,4 @@
 const express = require('express');
-
 const User = require('../models/user');
 
 const router = new express.Router();
@@ -16,8 +15,8 @@ router.post('/users/register', async (req, res) => {
     console.log(user.password)
     
     res.status(201).send({user});
-  } catch (e) {
-    res.send(e);
+  } catch (error) {
+    res.status(400).send({ error: { message: 'Already Registered' }});
   }
 });
 

@@ -1,13 +1,17 @@
 
     <div fxLayout="column">
-        <a routerLink="/user/add">Add</a>
-      <a routerLink="/user/show">Show</a>
-      <a routerLink="/user/dis">Out</a>
+        <a routerLink="/user/add">Entry the Student</a>|
+      <a routerLink="/user/show">Show Students</a>|
+      <a routerLink="/user/dis">Students Checked Out</a>|
+       <a routerLink="/user/home">Log Out</a>|
   
       </div>
-  <select class="form-control" fromControlName="studId" [(ngModel)]="studId" name="studId">
-  <option *ngFor="let s of show" [value]="s._id">{{s.SID}}</option>
-  </select> 
-  <button (click)="out()">OK</button>
+      <hr>
+      <div>SELECT TO CHECK OUT HERE</div>
+      <label>select a student   </label> 
+  <select class="form-control" fromControlName="studId" [(ngModel)]="studId" name="studId" >
+    <option *ngFor="let s of show" [value]="s._id" label="{{s.SID}}" placeholder="0" ></option>
+  </select>&nbsp;
+  <button (click)="out()">  CHECK OUT</button>
              
               <router-outlet></router-outlet>
