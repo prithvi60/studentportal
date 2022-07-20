@@ -1,0 +1,16 @@
+
+    <div fxLayout="column">
+        <a routerLink="/user/add">Add</a>
+      <a routerLink="/user/show">Show</a>
+      <a routerLink="/user/dis">Out</a>
+      <hr>
+<a sytle="cursor:pointer" (click)="exportexcel()">Export to excel</a>
+<table id="excel-table">
+    <tr *ngFor="let s of show">
+        <td>{{s.SID}}</td>
+        <td>{{s.fine}}</td>
+        <td>{{s.checkin}}</td>
+        <td>{{s.checkout}}</td>
+    </tr>
+</table>
+

@@ -72,7 +72,7 @@ const usermodel=require('./models/user')
 const app = express();
 
 app.disable('x-powered-by');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 app.use(function(req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');

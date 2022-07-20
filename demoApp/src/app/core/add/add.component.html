@@ -1,0 +1,21 @@
+<html>
+  <div>
+    <div fxLayout="column">
+        <a routerLink="/user/add">Add</a>
+      <a routerLink="/user/show">Show</a>
+      <a routerLink="/user/dis">Out</a>
+  
+      </div>
+
+<div class="form-container">
+  <form (submit)="AddStud()" class="border border-primary">
+    
+      <input [(ngModel)]="SID" name="SID" placeholder="SID" type="text" required>
+
+
+    <button>ADD</button>
+  </form>
+</div>
+</div>
+
+</html>
