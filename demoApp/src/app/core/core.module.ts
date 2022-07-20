@@ -10,6 +10,7 @@ import { ShowstudComponent } from './showstud/showstud.component';
 import { Use1Component } from './use1/use1.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { RouterModule } from '@angular/router';
     AddComponent,
     OutComponent,
     ShowstudComponent,
-    Use1Component
+    Use1Component,
+    HomeComponent
   ],
   imports: [
     CommonModule,

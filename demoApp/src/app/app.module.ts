@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainserviceService } from './mainservice.service';
 import { ExampleComponent } from './example/example.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ExampleComponent } from './example/example.component';
     AppRoutingModule,
     HttpClientModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [MainserviceService],
   bootstrap: [AppComponent]

@@ -1,18 +1,16 @@
 <html>
   <div>
         <div fxLayout="column">
-          <a routerLink="/user/home">Home</a>
-        <a routerLink="/user/login">Login</a>
         <a routerLink="/user/register">Register</a>
         </div>
-  
+  <div>LOGIN HERE</div>
 
 <div class="form-container">
   <form (submit)="login()" class="border border-primary">
     
-      <input [(ngModel)]="email" name="email" matInput placeholder="Your Email" type="email" required>
+      <input [(ngModel)]="email" name="email" placeholder="Your Email" type="email" required>
     
-      <input [(ngModel)]="password" name="password" matInput placeholder="Your Password" type="password" required>
+      <input [(ngModel)]="password" name="password" placeholder="Your Password" type="password" required>
     
 
     <button mat-raised-button color="primary">Login</button>

@@ -27,7 +27,7 @@ login(){
           this.router.navigateByUrl('/user/show')
 
         },
-        error: (err) => { console.log(err) }
+        error: (err) => { alert("enter proper credentials") }
        })
 
 }

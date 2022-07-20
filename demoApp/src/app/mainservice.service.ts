@@ -11,7 +11,9 @@ export class MainserviceService {
   public studId!:string;
   public min:any
   public fine:any
-  url:string='http://localhost:8080'
+  url:string='http://54.245.54.201:8080'
+  // url:string='http://localhost:8080'
+
   constructor(private http:HttpClient, private router:Router ) { }
   LoginUser(email:string,password:string):Observable<any>{
     console.log("inside login user")
@@ -19,6 +21,9 @@ export class MainserviceService {
 }
 RegUser(email:string,password:string):Observable<any>{
   return this.http.post<any>(`${this.url}/users/register`,{email,password})
+}
+postVerifyStud(SID:any):Observable<any>{
+  return this.http.post<any>(`${this.url}/verify`,{SID})
 }
 postStud(SID:any):Observable<any>{
   return this.http.post<any>(`${this.url}/stud`,{SID})

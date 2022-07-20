@@ -1,9 +1,12 @@
+<div fxLayout="column">
+    <a routerLink="/user/add">Entry the Student</a>|
+  <a routerLink="/user/show">Show Students</a>|
+  <a routerLink="/user/dis">Students Checked Out</a>|
+  <a routerLink="/user/home">Log Out</a>|
 
-    <div fxLayout="column">
-        <a routerLink="/user/add">Add</a>
-      <a routerLink="/user/show">Show</a>
-      <a routerLink="/user/dis">Out</a>
-      <hr>
+  </div>
+  <hr>
+
 <a sytle="cursor:pointer" (click)="exportexcel()">Export to excel</a>
 <table id="excel-table">
     <tr *ngFor="let s of show">
