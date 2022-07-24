@@ -20,25 +20,31 @@ public path2!:string
       path2:this.path2
       
     }
-    this.ser.PathFileXL(this.path2).subscribe(data=>{
+    console.log(data,this.path2,data.path2)
+    this.ser.PathFileXL(this.path2).subscribe({next:(data)=>{
       console.log(data)
       alert("ADDED TO DB!! press STUDENTS IN DATABASE link to see changes")
       this.router.navigateByUrl('/user/get')
      
 
-    })
-  }
+    },
+    error: (err) => { console.log(err) }
+  })
+}
   file(){
-    let data={
+    let c={
       path1:this.path1
     }
-    this.ser.PathFile(this.path1).subscribe(data=>{
+    console.log(c.path1)
+    this.ser.PathFile(c.path1).subscribe({next:(data)=>{
       console.log(data)
       alert("ADDED TO DB!! press STUDENTS IN DATABASE link to see changes")
       this.router.navigateByUrl('/user/get')
 
       
-    })
-  }
+    },
+    error: (err) => { console.log(err) }
+  })
+}
 
 }

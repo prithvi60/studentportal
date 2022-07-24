@@ -11,7 +11,7 @@ export class MainserviceService {
   public studId!:string;
   public min:any
   public fine:any
-  // url:string='http://54.245.54.201:8080'
+  // url:string='http://54.201.141.178:8080'
   url:string='http://localhost:8080'
 
   constructor(private http:HttpClient, private router:Router ) { }

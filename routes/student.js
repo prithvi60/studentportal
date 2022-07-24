@@ -1,7 +1,7 @@
 const express = require('express');
 const Student = require('../models/student');
 const csvtojson=require("csvtojson");
-xlsxj = require("xlsx-to-json");
+const xlsxj = require("xlsx-to-json");
 
 const router = new express.Router();
 router.post('/stud', async (req, res) => {
@@ -36,12 +36,16 @@ router.get('/show', async (req, res) => {
     }
 })
 router.post('/add/path/xlsx',async(req,res)=>{
+    path=req.body.path
+    console.log(path)
     xlsxj({
-        input: "C:/Users/VC/Downloads/Book1.xlsx", 
+        input: path, 
         output: "output.json"
       }, function(err, result) {
         if(err) {
-          console.error(err);
+            console.error(err);
+            return res.send(err)
+          
         }else {
                 Student.insertMany(result).then(function(d){
                     console.log("data Inserted")
@@ -49,6 +53,7 @@ router.post('/add/path/xlsx',async(req,res)=>{
                     res.status(200).send(d)
                 }).catch(function(error){
         console.log(error)
+        res.send(error)
                 })
             
         }

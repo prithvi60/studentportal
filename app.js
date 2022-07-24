@@ -74,7 +74,7 @@ const app = express();
 
 app.disable('x-powered-by');
 const port = process.env.PORT || 8080;
-// app.use(express.static(path.join(__dirname, '/demoApp/dist/demo-app/')));
+app.use(express.static(path.join(__dirname, '/demoApp/dist/demo-app/')));
 app.use(function(req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
 
