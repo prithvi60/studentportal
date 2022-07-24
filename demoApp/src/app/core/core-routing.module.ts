@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddComponent } from './add/add.component';
+
 import { AllstudComponent } from './allstud/allstud.component';
-import { HomeComponent } from './home/home.component';
+
 import { InputComponent } from './input/input.component';
+
 import { LoginComponent } from './login/login.component';
 import { OutComponent } from './out/out.component';
 import { RegisterComponent } from './register/register.component';
@@ -17,7 +19,7 @@ const routes: Routes = [
   {path:'show',component:ShowstudComponent},
   {path:'out',component:Use1Component},
   {path:'dis',component:OutComponent},
-  {path:'home',component:HomeComponent},
+
   {path:'in',component:InputComponent},
   {path:'get',component:AllstudComponent}
 ];
