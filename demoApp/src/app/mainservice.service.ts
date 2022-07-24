@@ -11,13 +11,19 @@ export class MainserviceService {
   public studId!:string;
   public min:any
   public fine:any
-  url:string='http://54.245.54.201:8080'
-  // url:string='http://localhost:8080'
+  // url:string='http://54.245.54.201:8080'
+  url:string='http://localhost:8080'
 
   constructor(private http:HttpClient, private router:Router ) { }
   LoginUser(email:string,password:string):Observable<any>{
     console.log("inside login user")
     return this.http.post<any>(`${this.url}/users/login`,{email,password})
+}
+PathFile(path:string):Observable<any>{
+  return this.http.post<any>(`${this.url}/add/path`,{path})
+}
+PathFileXL(path:string):Observable<any>{
+  return this.http.post<any>(`${this.url}/add/path/xlsx`,{path})
 }
 RegUser(email:string,password:string):Observable<any>{
   return this.http.post<any>(`${this.url}/users/register`,{email,password})
@@ -30,6 +36,9 @@ postStud(SID:any):Observable<any>{
 }
 getStud():Observable<any>{
   return this.http.get<any>(`${this.url}/show`)
+}
+getStudAll():Observable<any>{
+  return this.http.get<any>(`${this.url}/stud`)
 }
 getOneStud(id:string):Observable<any>{
   return this.http.get<any>(`${this.url}/studs/${id}`)

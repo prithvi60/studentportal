@@ -11,6 +11,8 @@ import { Use1Component } from './use1/use1.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { InputComponent } from './input/input.component';
+import { AllstudComponent } from './allstud/allstud.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { HomeComponent } from './home/home.component';
     OutComponent,
     ShowstudComponent,
     Use1Component,
-    HomeComponent
+    HomeComponent,
+    InputComponent,
+    AllstudComponent
   ],
   imports: [
     CommonModule,

@@ -9,6 +9,9 @@ const studentSchema = new Schema({
     unique:true
     
   },
+  age:{
+    type:Number
+  },
   min:{
     type:Number,
     default:0
@@ -22,10 +25,12 @@ const studentSchema = new Schema({
     default:new Date(new Date().getTime()+(5*60+30)*60000)
   },
 checkin:{
-    type:Date
+    type:Date,
+    default:new Date(new Date().getTime()+(5*60+30)*60000)
 },
 present:{
-    type:Boolean
+    type:Boolean,
+    default:true
 }
 },
 {
