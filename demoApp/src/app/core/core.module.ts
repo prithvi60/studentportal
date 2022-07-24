@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { InputComponent } from './input/input.component';
 import { AllstudComponent } from './allstud/allstud.component';
+import { InWinComponent } from './in-win/in-win.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { AllstudComponent } from './allstud/allstud.component';
     Use1Component,
     HomeComponent,
     InputComponent,
-    AllstudComponent
+    AllstudComponent,
+    InWinComponent
   ],
   imports: [
     CommonModule,

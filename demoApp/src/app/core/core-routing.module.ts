@@ -11,6 +11,7 @@ import { OutComponent } from './out/out.component';
 import { RegisterComponent } from './register/register.component';
 import { ShowstudComponent } from './showstud/showstud.component';
 import { Use1Component } from './use1/use1.component';
+import { InWinComponent } from './in-win/in-win.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path:'dis',component:OutComponent},
 {path:'home',component:HomeComponent},
   {path:'in',component:InputComponent},
-  {path:'get',component:AllstudComponent}
+  {path:'get',component:AllstudComponent},
+  {path:'win',component:InWinComponent}
 ];
 
 @NgModule({
