@@ -1,0 +1,353 @@
+// paellte
+$one: #ffc2c0;
+$two: #3b3086;
+$three: #7b3c97;
+$four: #e66bba;
+$five: #7291f9;
+
+.App {
+  text-align: center;
+  color: $one;
+  height: 100vh;
+}
+html {
+  height: 100vh;
+  width: 100vw;
+}
+body {
+  overflow: hidden;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: $five;
+}
+.nav-links {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.link {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  padding: 90px 0px 90px 0;
+  background-color: $five;
+}
+
+.sub-main {
+  display: flex;
+  justify-content: center;
+  height: 550px;
+  width: 80vw;
+  box-shadow: 11px 12px 13px 12px $two;
+  padding: 0px 30px;
+  border-radius: 60px;
+  background-color: $one;
+}
+
+input {
+  width: 300px;
+  height: 50px;
+  border-radius: 60px;
+  box-shadow: inset 0px 0px 25px 0px $three;
+}
+
+.imgs {
+  padding-top: 20px;
+  justify-content: center;
+  display: flex;
+}
+.container-image {
+  background-color: $one;
+  border-radius: 150px;
+  align-items: center;
+  display: flex;
+  height: 115px;
+  width: 115px;
+}
+
+.profile {
+  height: 130px;
+  width: 130px;
+  border-radius: 130px;
+}
+
+.LHeader {
+  text-align: center;
+}
+
+.email {
+  height: 25px;
+  width: 35px;
+  position: absolute;
+  padding: 15px 0 0 15px;
+  border: none;
+  outline: none;
+}
+
+.fill {
+  padding-left: 70px;
+  font-size: 20px;
+}
+
+.second-input {
+  padding-top: 20px;
+  margin-bottom: 12px;
+}
+
+.btn {
+  border-radius: 60px;
+  background-color: $five;
+  text-transform: uppercase;
+  padding: 4px;
+  font-size: 12px;
+  color: white;
+}
+
+.login-btn {
+  padding-top: 20px;
+}
+
+.reg-link {
+  padding-top: 10px;
+}
+
+.mail-id {
+  padding-top: 20px;
+}
+
+.plist {
+  padding-right: 10px;
+  font-size: 25px;
+}
+
+select {
+  appearance: none;
+  outline: 0;
+  background: $two;
+  background-image: none;
+  border: 1px solid $two;
+  padding-top: 200px;
+}
+
+.select {
+  position: relative;
+  top: 10px;
+  display: block;
+  left: 30px;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: $three;
+  overflow: hidden;
+  border-radius: 0.25em;
+}
+
+select {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0 0 0 1em;
+  color: $one;
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 1em;
+  background: $three;
+  pointer-events: none;
+}
+
+.select:hover::after {
+  cursor: pointer;
+  color: $two;
+}
+.home-container {
+  overflow-y: auto;
+  background-color: $three;
+  box-shadow: 9px 8px 16px 0px $two;
+  padding: 4px;
+  border-radius: 60px;
+  margin: 0px 12px;
+  margin-top: 50px;
+  margin-bottom: 32px;
+}
+.scroll-height {
+  height: calc(100vh - 150px) !important;
+}
+.box {
+  position: relative;
+  padding: 12px;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 24%;
+  h1 {
+    margin: 4px 0px !important;
+  }
+  div {
+    margin-bottom: 8px;
+  }
+  .btn {
+    position: absolute;
+    right: 88px;
+  }
+}
+.m-l-0 {
+  margin-left: 0 !important;
+}
+.imp {
+  color: white !important;
+  background-color: black !important;
+  border-radius: 60px;
+  padding: 6px 16px;
+  &:hover {
+    cursor: pointer;
+    color: black !important;
+    background-color: white !important;
+  }
+}
+.text-btn {
+  background-color: transparent;
+  color: $one;
+  font-size: 32px;
+  margin-top: 6px;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+    color: white;
+  }
+}
+.nav {
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  gap: 8px;
+  width: 100%;
+  top: 0;
+  background-color: $three;
+  div {
+    padding: 4px;
+    margin-right: 4px;
+  }
+}
+.timer {
+  position: relative;
+  margin-top: 50px;
+  color: white;
+  font-size: 24px;
+}
+.inner-container {
+  margin: 0 10px;
+}
+.mail-id {
+  margin-bottom: 12px;
+}
+.box-input {
+  margin: 4%;
+  height: 40px;
+  &::placeholder {
+    text-align: center;
+  }
+}
+.input-div {
+  flex-direction: column;
+  align-items: center;
+}
+.f-2 {
+  font-size: 2em;
+  margin-bottom: 0 !important;
+}
+.f-24 {
+  font-size: 24px;
+}
+.fine-container {
+  text-align: center;
+  color: white;
+  .fine {
+    margin-top: 12px;
+    color: $one;
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: dashed;
+  }
+}
+.export {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background: $two;
+  margin: auto;
+  border-top-left-radius: 35%;
+  border-top-right-radius: 35%;
+  padding: 4px;
+}
+.p-16 {
+  padding: 16px;
+  text-decoration: none;
+}
+.out {
+  height: calc(100vh - 150px) !important;
+}
+.csvtable {
+  display: grid;
+  row-gap: 8px;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-content: center;
+}
+.grid-item {
+  text-align: center;
+}
+.first {
+  text-align: start !important;
+  margin-left: 0.8em;
+}
+input {
+  text-align: center;
+}
+
+// Responsive
+@media only screen and (min-width: 600px) {
+  .first {
+    margin-left: 4em;
+  }
+  .box {
+    .btn {
+      right: 150px;
+    }
+  }
+}
+@media only screen and (min-width: 900px) {
+  h2{
+    margin: 0;
+  }
+  .home-container{
+    margin-bottom: 8px;
+  }
+  .box {
+    .btn {
+      right: 400px;
+    }
+  }
+}
